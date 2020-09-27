@@ -1,21 +1,39 @@
 .header {
-  padding: $space-2 0;
+  padding: 2rem 0;
+  background-color: white;
+  // @include mobile {
+  //   position: fixed;
+  //   width: 100%;
+  // }
 
   nav.container {
     display: flex;
     justify-content: space-between;
   }
 
+  &__logo {
+    @include flexCenter;
+  }
+
   &__menu {
     @include flexCenter;
     @include mobile {
       display: none;
+      // justify-content: flex-start;
+      // padding: 4.5rem 1.25rem;
+      // flex-direction: column;
+      // position: fixed;
+      // top: 96px; // Depois ver uma melhor pratica para isso
+      // right: 0;
+      // width: 100%;
+      // height: calc(100vh - 96px);
+      // background-color: $very-dark-violet;
     }
   }
 
   &__item {
     & + & {
-      margin-left: $space;
+      margin-left: 0.75rem;
     }
   }
 

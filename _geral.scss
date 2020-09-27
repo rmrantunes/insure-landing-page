@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,16 +17,39 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  @include fontHeading(4rem);
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 10rem;
+
+    background-color: currentColor;
+
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+  }
+
+  @include mobile {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding-left: $space-1;
-  padding-right: $space-1;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pattern__mobile {
   display: none;
-  
+
   @include mobile {
     display: block;
   }
