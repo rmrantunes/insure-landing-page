@@ -12,3 +12,33 @@
   font-family: "Karla", sans-serif;
   font-weight: $wheigt;
 }
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin link {
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  color: $grayish-blue;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: $space;
+
+  &:hover {
+    color: $very-dark-violet;
+  }
+
+  &__btn {
+    color: $very-dark-violet;
+    padding: $space $space-2;
+    border: 2px solid;
+
+    &:hover {
+      color: $very-light-gray;
+      background-color: $very-dark-violet;
+    }
+  }
+}

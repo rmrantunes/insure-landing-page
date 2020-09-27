@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  @include fontBody;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: $space-1;
+  padding-right: $space-1;
+}
+
+.pattern__mobile {
+  display: none;
+  
+  @include mobile {
+    display: block;
+  }
+}
+
+.pattern__desktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+.link {
+  @include link;
+}

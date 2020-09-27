@@ -1,0 +1,41 @@
+.header {
+  padding: $space-2 0;
+
+  nav.container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    @include flexCenter;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-left: $space;
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include mobile {
+      display: block;
+      background: url("../images/icon-hamburger.svg");
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(100%);
+        opacity: 0.9;
+      }
+
+      &--active {
+        background: url("../images/icon-close.svg");
+      }
+    }
+  }
+}
