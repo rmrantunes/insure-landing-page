@@ -1,0 +1,8 @@
+@mixin fontHeading() {
+  font-family: 'DM Serif Display', serif;
+}
+
+@mixin fontBody($wheigt: 400) {
+  font-family: 'Karla', sans-serif;
+  font-weight: $wheigt;
+}
